@@ -1,0 +1,149 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+    <title>My Awesome Web Portfolio!</title>
+</head>
+<body>
+<div class="container">
+    <div class="transparent">
+        <img id="myImage" src="images/test1.jpg" alt="Portfolio Image">
+        <div class="overlay-text">
+<div id="changes">
+<h1>Welcome to my developer portfolio!!</h1>
+
+<div>
+    <input type="button" value="ABOUT ME"onclick="changeAboutMe()">
+    <input type="button" value="PROJECTS"onclick="changeProjects()">
+    <input type="button" value="CONTACT"onclick="changeContactInfo()">
+    <input type="button" value="HOME"onclick="window.location.href='Opening.php'; location.reload();">
+</div>
+<div class="text" id="text">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+  function changeAboutMe() {    // Get the content container
+    var imageElement = document.getElementById('myImage');
+    imageElement.src = "images/test3.jpg";
+
+    var contentContainer = document.getElementById('changes');   
+    var oldHeading = contentContainer.querySelector('h1');
+                
+    if (oldHeading) {
+     oldHeading.remove();
+    }
+
+    var newHeading = document.createElement('h1');
+    newHeading.textContent = 'A little about me...';
+    contentContainer.insertBefore(newHeading, contentContainer.querySelector('div'));
+
+
+    var textContainer = document.getElementById('text');
+     // Remove the existing paragraphs
+     var existingParagraphs = contentContainer.querySelectorAll('p');
+    existingParagraphs.forEach(function (paragraph) {
+        paragraph.remove();
+    });
+
+    var newText = document.createElement('p');
+newText.innerHTML = `Greetings! I'm Joe Muldowney, a dedicated undergraduate student at FSU pursuing a BS degree in Computer Science. 
+                    My journey in the world of code began with a deep-rooted passion for building and fixing things, which has become the driving force in my life.
+                    One of my biggest goals is to make a positive impact in the field of computer science. 
+                    I'm on a mission to achieve this through unwavering dedication and continuous learning.`;
+                    newText.style.fontSize = '26px'; // Adjust the size as needed
+// Create a new paragraph element for the second paragraph
+var newText2 = document.createElement('p');
+newText2.innerHTML = `I thrive on problem-solving and enjoy pushing the boundaries of my expertise.
+                    While my heart lies in building robust back-end applications, I also find immense satisfaction in crafting and maintaining databases, implementing security measures to prevent malicious attacks, and exploring the ever-evolving realm of artificial intelligence.
+                    I believe that these elements are integral to creating secure and scalable software systems. 
+                    Feel free to explore my portfolio and join me on this exciting journey through the world of code, innovation, and problem-solving.`;
+                    newText2.style.fontSize = '26px'; // Adjust the size as needed
+// Append the new paragraphs below the buttons
+contentContainer.appendChild(newText);
+contentContainer.appendChild(newText2);
+
+}
+function changeProjects() {    // Get the content container
+    var imageElement = document.getElementById('myImage');
+    imageElement.src = "images/test3.jpg";
+    var contentContainer = document.getElementById('changes');
+    // Remove the old h1 element
+    var oldHeading = contentContainer.querySelector('h1');
+                
+    if (oldHeading) {
+     oldHeading.remove();
+    }
+
+    var newHeading = document.createElement('h1');
+    newHeading.textContent = 'Projects';
+    contentContainer.insertBefore(newHeading, contentContainer.querySelector('div'));
+
+
+    var textContainer = document.getElementById('text');
+    var existingParagraphs = contentContainer.querySelectorAll('p');
+    existingParagraphs.forEach(function (paragraph) {
+        paragraph.remove();
+    });
+
+
+    var newText = document.createElement('p');
+    newText.textContent = `Hello, I have a full stack demo in Java using Spring boot framework, Maven, and JPA in the back end 
+    and React in the front end with Material-UI framework.`; 
+            
+    // Append the new text below the existing text
+    textContainer.appendChild(newText);
+
+}
+function changeContactInfo() {    // Get the content container
+    var imageElement = document.getElementById('myImage');
+    imageElement.src = "images/test1.jpg";
+    var contentContainer = document.getElementById('changes');
+    // Remove the old h1 element
+    var oldHeading = contentContainer.querySelector('h1');
+                
+    if (oldHeading) {
+     oldHeading.remove();
+    }
+
+    var newHeading = document.createElement('h1');
+    newHeading.textContent = 'Contact Information';
+    contentContainer.insertBefore(newHeading, contentContainer.querySelector('div'));
+    
+    var textContainer = document.getElementById('text');
+    var existingParagraphs = contentContainer.querySelectorAll('p');
+    existingParagraphs.forEach(function (paragraph) {
+        paragraph.remove();
+    });
+
+
+    var newText = document.createElement('p');
+    newText.textContent = `muldowneyjoe84@gmail.com`;
+
+    var newText2 = document.createElement('p');
+    var linkedInLink = document.createElement('a');
+    linkedInLink.href = 'https://www.linkedin.com/in/joemuldowneycs'; // Replace with your LinkedIn URL
+    linkedInLink.textContent = 'LinkedIn: Click here';
+    linkedInLink.target = '_blank';
+    newText2.appendChild(linkedInLink);
+
+    var newText3 = document.createElement('p');
+    var githubLink = document.createElement('a');
+    githubLink.href = 'https://github.com/JoeMuldowney'; // Replace with your GitHub URL
+    githubLink.textContent = 'GitHub: Click here';
+    githubLink.target = '_blank';
+    newText3.appendChild(githubLink);  
+            
+    // Append the new text below the existing text
+    textContainer.appendChild(newText);
+    textContainer.appendChild(newText2);
+    textContainer.appendChild(newText3);
+
+}
+</script>
+</body>
+</html>
