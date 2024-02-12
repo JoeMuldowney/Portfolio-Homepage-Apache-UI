@@ -59,9 +59,10 @@ newText.innerHTML = `Greetings! I'm Joe Muldowney, a dedicated undergraduate stu
 // Create a new paragraph element for the second paragraph
 var newText2 = document.createElement('p');
 newText2.innerHTML = `I thrive on problem-solving and enjoy pushing the boundaries of my expertise.
-                    While my heart lies in building robust back-end applications, I also find immense satisfaction in crafting and maintaining databases, implementing security measures to prevent malicious attacks, and exploring the ever-evolving realm of artificial intelligence.
+                    While my heart lies in building robust back-end applications, I also find immense satisfaction in crafting and maintaining databases and implementing security measures to prevent malicious attacks.
                     I believe that these elements are integral to creating secure and scalable software systems. 
-                    Feel free to explore my portfolio and join me on this exciting journey through the world of code, innovation, and problem-solving.`;
+                    Feel free to explore my portfolio and join me on this exciting journey through the world of code, innovation, and problem-solving.
+                    `;
                     newText2.style.fontSize = '26px'; // Adjust the size as needed
 // Append the new paragraphs below the buttons
 contentContainer.appendChild(newText);
@@ -92,8 +93,9 @@ function changeProjects() {    // Get the content container
 
 
     var newText = document.createElement('p');
-    newText.textContent = `Hello, I have a full stack demo in Java using Spring boot framework, Maven, and JPA in the back end 
-    and React in the front end with Material-UI framework.`; 
+    newText.innerHTML = `I developed a RESTful API using Java and Maven, leveraging the Spring Boot framework. 
+    On the frontend, I utilized React along with JSX to build a modern and responsive user interface.
+    <div><a href="http://52.14.246.147/"target="_blank" style="color: blue;">Explore my portfolio project</a></div>`; 
             
     // Append the new text below the existing text
     textContainer.appendChild(newText);
@@ -129,6 +131,7 @@ function changeContactInfo() {    // Get the content container
     linkedInLink.href = 'https://www.linkedin.com/in/joemuldowneycs'; // Replace with your LinkedIn URL
     linkedInLink.textContent = 'LinkedIn: Click here';
     linkedInLink.target = '_blank';
+    linkedInLink.style.color = 'blue';
     newText2.appendChild(linkedInLink);
 
     var newText3 = document.createElement('p');
@@ -136,6 +139,7 @@ function changeContactInfo() {    // Get the content container
     githubLink.href = 'https://github.com/JoeMuldowney'; // Replace with your GitHub URL
     githubLink.textContent = 'GitHub: Click here';
     githubLink.target = '_blank';
+    githubLink.style.color = 'blue';
     newText3.appendChild(githubLink);  
             
     // Append the new text below the existing text
