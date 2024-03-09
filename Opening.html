@@ -11,14 +11,17 @@
 <div id="changes">
 <h1>Welcome to my developer portfolio!</h1>
 
-<div>
+
+
+<div>    
     <input type="button" value="ABOUT ME"onclick="changeAboutMe()">
     <input type="button" value="PROJECTS"onclick="changeProjects()">
     <input type="button" value="CONTACT"onclick="changeContactInfo()">
     <input type="button" value="HOME"onclick="window.location.href='Opening.php'; location.reload();">
 </div>
-<div class="text" id="text">
-
+<div id="resume">
+    <h2><a href="images/webresume.pdf" target="_blank" style="color: blue;">click here for resume</a></h2>
+    
 </div>
 </div>
 </div>
@@ -29,6 +32,11 @@
 
   function changeAboutMe() {    // Get the content container
     var imageElement = document.getElementById('myImage');
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }
     imageElement.src = "images/test3.jpg";
 
     var contentContainer = document.getElementById('changes');   
@@ -75,7 +83,11 @@ function changeProjects() {    // Get the content container
     var contentContainer = document.getElementById('changes');
     // Remove the old h1 element
     var oldHeading = contentContainer.querySelector('h1');
-                
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }            
     if (oldHeading) {
      oldHeading.remove();
     }
@@ -95,7 +107,7 @@ function changeProjects() {    // Get the content container
     var newText = document.createElement('p');
     newText.innerHTML = `I developed a RESTful API using Java and Maven, leveraging the Spring Boot framework. 
     On the frontend, I utilized React along with JSX to build a modern and responsive user interface.
-    <div><a href="http://3.17.51.203:3000/"target="_blank" style="color: blue;">Explore my portfolio project</a></div>`; 
+    <div><a href="http:csportfoliojm.com/frontend "target="_blank" style="color: blue;">Explore my portfolio project</a></div>`; 
             
     // Append the new text below the existing text
     textContainer.appendChild(newText);
@@ -107,7 +119,11 @@ function changeContactInfo() {    // Get the content container
     var contentContainer = document.getElementById('changes');
     // Remove the old h1 element
     var oldHeading = contentContainer.querySelector('h1');
-                
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }            
     if (oldHeading) {
      oldHeading.remove();
     }
