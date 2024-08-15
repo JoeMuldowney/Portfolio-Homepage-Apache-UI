@@ -11,15 +11,22 @@
 <div id="changes">
 <h1>Welcome to my developer portfolio!</h1>
 
-<div>
+
+
+<div>    
     <input type="button" value="ABOUT ME"onclick="changeAboutMe()">
     <input type="button" value="PROJECTS"onclick="changeProjects()">
     <input type="button" value="CONTACT"onclick="changeContactInfo()">
     <input type="button" value="HOME"onclick="window.location.href='Opening.php'; location.reload();">
 </div>
-<div class="text" id="text">
-
+<div class="text" id="text"></div>
+<div id="resume">
+    <h2><a href="images/webresume.pdf" target="_blank" style="color: blue;">click here for resume</a></h2>
+    
 </div>
+
+    
+
 </div>
 </div>
 </div>
@@ -29,11 +36,16 @@
 
   function changeAboutMe() {    // Get the content container
     var imageElement = document.getElementById('myImage');
+
     imageElement.src = "images/test3.jpg";
 
     var contentContainer = document.getElementById('changes');   
     var oldHeading = contentContainer.querySelector('h1');
-                
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }            
     if (oldHeading) {
      oldHeading.remove();
     }
@@ -59,9 +71,10 @@ newText.innerHTML = `Greetings! I'm Joe Muldowney, a dedicated undergraduate stu
 // Create a new paragraph element for the second paragraph
 var newText2 = document.createElement('p');
 newText2.innerHTML = `I thrive on problem-solving and enjoy pushing the boundaries of my expertise.
-                    While my heart lies in building robust back-end applications, I also find immense satisfaction in crafting and maintaining databases, implementing security measures to prevent malicious attacks, and exploring the ever-evolving realm of artificial intelligence.
+                    While my heart lies in building robust back-end applications, I also find immense satisfaction in crafting and maintaining databases and implementing security measures to prevent malicious attacks.
                     I believe that these elements are integral to creating secure and scalable software systems. 
-                    Feel free to explore my portfolio and join me on this exciting journey through the world of code, innovation, and problem-solving.`;
+                    Feel free to explore my portfolio and join me on this exciting journey through the world of code, innovation, and problem-solving.
+                    `;
                     newText2.style.fontSize = '26px'; // Adjust the size as needed
 // Append the new paragraphs below the buttons
 contentContainer.appendChild(newText);
@@ -74,7 +87,11 @@ function changeProjects() {    // Get the content container
     var contentContainer = document.getElementById('changes');
     // Remove the old h1 element
     var oldHeading = contentContainer.querySelector('h1');
-                
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }       
     if (oldHeading) {
      oldHeading.remove();
     }
@@ -92,11 +109,21 @@ function changeProjects() {    // Get the content container
 
 
     var newText = document.createElement('p');
-    newText.textContent = `Hello, I have a full stack demo in Java using Spring boot framework, Maven, and JPA in the back end 
-    and React in the front end with Material-UI framework.`; 
+    newText.innerHTML = `I developed a RESTful API using Java and Maven, leveraging the Spring Boot framework. 
+    On the frontend, I utilized React along with JSX to build a modern and responsive user interface.
+    <div><a href="http:csportfoliojm.com/frontend "target="_blank" style="color: blue;">Explore my portfolio project</a></div>`; 
+     
+    
+    var newText2 = document.createElement('p');
+    newText2.innerHTML = `I'm architecting a robust e-commerce platform utilizing microservices with RESTful APIs. Python with Django handles user authentication, 
+    profiles, and book searches. Separate Go microservices manage carts and checkout, while another leverages machine learning to analyze book reviews. Explore the 
+    completed user functionalities (creation, login/logout, profiles) that integrate seamlessly with a React.js frontend! .   
+    <div><a href="http://18.220.48.41:3000/ "target="_blank" style="color: blue;">Explore my portfolio project</a></div>`; 
             
     // Append the new text below the existing text
     textContainer.appendChild(newText);
+    // Append the new text below the existing text
+    textContainer.appendChild(newText2);
 
 }
 function changeContactInfo() {    // Get the content container
@@ -105,7 +132,11 @@ function changeContactInfo() {    // Get the content container
     var contentContainer = document.getElementById('changes');
     // Remove the old h1 element
     var oldHeading = contentContainer.querySelector('h1');
-                
+    var resume = document.getElementById('resume');
+    if (resume) {
+            // Remove the link element from the DOM
+            resume.parentNode.removeChild(resume);
+        }     
     if (oldHeading) {
      oldHeading.remove();
     }
@@ -129,6 +160,7 @@ function changeContactInfo() {    // Get the content container
     linkedInLink.href = 'https://www.linkedin.com/in/joemuldowneycs'; // Replace with your LinkedIn URL
     linkedInLink.textContent = 'LinkedIn: Click here';
     linkedInLink.target = '_blank';
+    linkedInLink.style.color = 'blue';
     newText2.appendChild(linkedInLink);
 
     var newText3 = document.createElement('p');
@@ -136,6 +168,7 @@ function changeContactInfo() {    // Get the content container
     githubLink.href = 'https://github.com/JoeMuldowney'; // Replace with your GitHub URL
     githubLink.textContent = 'GitHub: Click here';
     githubLink.target = '_blank';
+    githubLink.style.color = 'blue';
     newText3.appendChild(githubLink);  
             
     // Append the new text below the existing text
