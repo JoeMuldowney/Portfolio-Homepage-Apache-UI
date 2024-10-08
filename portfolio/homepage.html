@@ -145,7 +145,12 @@ function changeContactInfo() {    // Get the content container
 
 
     var newText = document.createElement('p');
-    newText.textContent = `muldowneyjoe84@gmail.com`;
+    var emailLink = document.createElement('a');
+    emailLink.href = 'mailto:joseph.h.muldowney@gmail.com';
+    emailLink.textContent = 'joseph.h.muldowney@gmail.com';
+    emailLink.style.color = 'blue';
+    newText.appendChild(emailLink); // Appending to the body or wherever you need it
+    
 
 
     var newText2 = document.createElement('p');
