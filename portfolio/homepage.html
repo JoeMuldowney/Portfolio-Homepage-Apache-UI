@@ -63,13 +63,29 @@
     });
 
     var newText = document.createElement('p');
-newText.innerHTML = `Greetings! I'm Joe Muldowney, a dedicated undergraduate student at FSU pursuing a BS degree in Computer Science.
-                    My journey in the world of code began with a deep-rooted passion for building and fixing things, which has become the driving force in my life.
-                    One of my primary goals is to make a positive impact in the field of computer science, driven by unwavering dedication and a commitment to continuous learning.`;
+newText.innerHTML = `My journey in software development began with a passion for building and solving complex problems, 
+                    which has become the driving force in my life. I aim to positively impact software development, 
+                    fueled by a commitment to continuous learning, unwavering dedication, and team collaboration.`;
                     newText.style.fontSize = '26px'; // Adjust the size as needed
 // Create a new paragraph element for the second paragraph
 var newText2 = document.createElement('p');
-newText2.innerHTML = `I thrive on problem-solving and relish pushing the boundaries of my expertise. My core interests lie in developing robust back-end applications and optimizing database systems, implementing rigorous security measures, and exploring the realms of DevOps and Machine Learning. I firmly believe these elements are pivotal in crafting secure and scalable software systems.`;
+newText2.innerHTML = `    
+    <div style="text-align: center;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>My core interests and skills include:</div><br>
+        <ul style="list-style-position: inside; padding-left: 0; margin: 0;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px;">
+                <li> Developing robust back-end applications</li>
+                <li> Developing responsive user interfaces</li>
+                <li> Optimizing database systems</li>
+                <li> Implementing rigorous security measures</li>
+                <li> Utilizing DevOps tools for CI/CD</li>
+                <li style="margin: 0; padding: 0;"> Exploring machine learning</li>
+                </div>
+            </ul><br>
+            <div>I believe these elements are crucial for crafting secure and scalable software systems.</div>
+        </div>
+    </div>`;
                     newText2.style.fontSize = '26px'; // Adjust the size as needed
 // Append the new paragraphs below the buttons
 contentContainer.appendChild(newText);
@@ -108,10 +124,9 @@ function changeProjects() {    // Get the content container
     <div><a href="https://csportfoliojm.com/frontend/ "target="_blank" style="color: blue;">Property Management</a></div>`;
 
         var newText2 = document.createElement('p');
-            newText2.innerHTML = ` I'm currently architecting a robust e-commerce platform using microservices with RESTful APIs. Python with Django powers essential functionalities such as user authentication, managing user accounts, and enabling book searches. Concurrently, a separate set of Go microservices handles cart management, addresses, billing, and checkout processes.
-
-Additionally, I'm integrating machine learning to analyze book reviews and generate scores, enhancing user experience and decision-making. While I continue to refine the AI scoring mechanism, feel free to explore the completed functionalities of this evolving project.
-
+            newText2.innerHTML = `I developed a scalable e-commerce platform using microservices. Django in Python powers core features like user authentication, 
+            account management, and book search, while a Go-based microservice handles cart, billing, and checkout via API. I'm also integrating a machine learning 
+            feature to score book reviews, enriching user experience and decision-making. Core functionalities are ready for exploration.
             <div><a href="https://csjoeportfolio.com/ "target="_blank" style="color: blue;">Virtual Library</a></div>`;
     // Append the new text below the existing text
     textContainer.appendChild(newText);
